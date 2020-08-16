@@ -38,59 +38,14 @@ scoop install gradle
 実行結果:
 ```
 Updating Scoop...
-Updating 'java' bucket...
 Updating 'main' bucket...
 Scoop was updated successfully!
-Installing 'openjdk11' (11.0.2-9) [64bit]
-Loading openjdk-11.0.2_windows-x64_bin.zip from cache
-Checking hash of openjdk-11.0.2_windows-x64_bin.zip ... ok.
-Extracting openjdk-11.0.2_windows-x64_bin.zip ... done.
-Linking ~\scoop\apps\openjdk11\current => ~\scoop\apps\openjdk11\11.0.2-9
-'openjdk11' (11.0.2-9) was installed successfully!
+Installing 'gradle' (6.6) [64bit]
+Downloading https://services.gradle.org/distributions/gradle-6.6-all.zip (138.4 MB)...
+Checking hash of gradle-6.6-all.zip ... ok.
+Extracting gradle-6.6-all.zip ... done.
+Linking ~\scoop\apps\gradle\current => ~\scoop\apps\gradle\6.6
+Creating shim for 'gradle'.
+'gradle' (6.6) was installed successfully!
 ```
-Java のインストールが完了した。
-
-## Java のバージョン確認
-Java がインストールできていることを、次のコマンドで確認する。
-```console
-java --version
-```
-実行結果:
-```
-openjdk 11.0.2 2019-01-15
-OpenJDK Runtime Environment 18.9 (build 11.0.2+9)
-OpenJDK 64-Bit Server VM 18.9 (build 11.0.2+9, mixed mode)
-```
-
-## はじめての Java ファイル作成
-次のコマンドを実行して「Hello world.」を出力する毎度おなじみの Java ファイルを作成する。
-```console
-echo 'public class App {
-    public static void main(String[] args) {
-        System.out.println("Hello world.");
-    }
-}' > ./App.java
-```
-コードが書き込まれたか、確認する。
-```console
-cat ./App.java
-```
-
-## はじめての Java 実行
-次のコマンドで作成した `App.java` ファイルをコンパイルする。
-```console
-javac ./App.java
-```
-これでカレントディレクトリに、コンパイルされた `App.class` ファイルが生成される。
-
-`java` コマンドでこのクラスファイルを実行する。
-
-```console
-java App
-```
-実行結果: 
-```
-Hello world.
-```
-
-インストールした Java で、Java ファイルのコンパイルと実行までできることが、確認できた。
+Gradle のインストールが完了した。
